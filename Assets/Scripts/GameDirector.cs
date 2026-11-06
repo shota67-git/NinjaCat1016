@@ -41,4 +41,9 @@ public class GameDirector : MonoBehaviour
     {
         hp.GetComponent<Image>().fillAmount -= 0.1f;
     }
+    public void IncreaseHp()
+    {
+        Image img = hp.GetComponent<Image>();
+        img.fillAmount = Mathf.Min(1f, img.fillAmount + 0.1f);
+    }
 }
